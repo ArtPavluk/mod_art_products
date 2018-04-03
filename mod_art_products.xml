@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.8" type="module" client="site" method="upgrade">
+	<name>MOD_ART_PRODUCTS</name>
+	<author>Artem Pavluk</author>
+	<creationDate>April 2018</creationDate>
+	<copyright>© copyright 2010 - 2018 Private master Pavluk</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>info@art-pavluk.com</authorEmail>
+	<authorUrl>https://art-pavluk.com</authorUrl>
+	<version>1.0.0</version>
+	<description>MOD_ART_PRODUCTS_DESCRIPTION</description>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.mod_art_products.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_art_products.sys.ini</language>
+		<language tag="ru-RU">ru-RU/ru-RU.mod_art_products.ini</language>
+		<language tag="ru-RU">ru-RU/ru-RU.mod_art_products.sys.ini</language>
+	</languages>
+	<files>
+		<filename module="mod_art_products">mod_art_products.php</filename>
+		<folder>tmpl</folder>
+		<filename>helper.php</filename>
+	</files>
+	<media destination="mod_art_products" folder="media">
+		<folder>css</folder>
+		<folder>js</folder>
+	</media>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="layout" type="modulelayout"
+					   label="JFIELD_ALT_LAYOUT_LABEL"
+					   description="JFIELD_ALT_MODULE_LAYOUT_DESC"/>
+				<field name="moduleclass_sfx" type="textarea"
+					   label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					   description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"
+					   rows="3"/>
+				<field name="cache" type="list"
+					   label="COM_MODULES_FIELD_CACHING_LABEL"
+					   description="COM_MODULES_FIELD_CACHING_DESC"
+					   default="1">
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field name="cache_time" type="text"
+					   label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					   description="COM_MODULES_FIELD_CACHE_TIME_DESC"
+					   default="900"/>
+				<field name="cachemode" type="hidden"
+					   default="static">
+					<option value="static">Static</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+	<updateservers>
+		<server type="extension" priority="1" name="Art products module">
+			https://update.art-pavluk.com/update?extension=mod_art_products
+		</server>
+	</updateservers>
+</extension>
