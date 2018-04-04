@@ -27,6 +27,41 @@
 	<config>
 		<fields name="params">
 			<fieldset name="basic">
+				<field name="products" type="subform"
+					   multiple="true"
+					   label="MOD_ART_PRODUCTS_PRODUCT_ADD">
+					<form>
+						<field name="name" type="text"
+							   label="MOD_ART_PRODUCTS_PRODUCT_NAME"
+							   class="input-xxlarge input-large-text"
+							   hint="MOD_ART_PRODUCTS_PRODUCT_NAME_HINT"/>
+						<field name="code" type="text"
+							   label="MOD_ART_PRODUCTS_PRODUCT_CODE"
+							   hint="MOD_ART_PRODUCTS_PRODUCT_CODE_HINT"/>
+						<field name="price" type="text"
+							   label="MOD_ART_PRODUCTS_PRODUCT_PRICE"
+							   hint="MOD_ART_PRODUCTS_PRODUCT_PRICE_HINT"/>
+						<field name="price_old" type="text"
+							   label="MOD_ART_PRODUCTS_PRODUCT_PRICE_OLD"
+							   hint="MOD_ART_PRODUCTS_PRODUCT_PRICE_OLD_HINT"/>
+						<field name="tag" type="list"
+							   label="MOD_ART_PRODUCTS_PRODUCT_TAG">
+							<option value="">MOD_ART_PRODUCTS_PRODUCT_TAG_SELECT</option>
+							<option value="new">MOD_ART_PRODUCTS_PRODUCT_TAG_NEW</option>
+							<option value="sale">MOD_ART_PRODUCTS_PRODUCT_TAG_SALE</option>
+							<option value="hit">MOD_ART_PRODUCTS_PRODUCT_TAG_HIT</option>
+						</field>
+						<field name="image" type="media" label="MOD_ART_PRODUCTS_PRODUCT_IMAGE" class="input-large"/>
+						<field name="text" type="textarea"
+							   label="MOD_ART_PRODUCTS_PRODUCT_TEXT"
+							   hint="MOD_ART_PRODUCTS_PRODUCT_TEXT_HINT"
+							   rows="10"
+							   cols="5"
+							   class="span12"
+							   filter="JComponentHelper::filterText"/>
+						<field type="spacer" hr="false"/>
+					</form>
+				</field>
 			</fieldset>
 			<fieldset name="advanced">
 				<field name="layout" type="modulelayout"

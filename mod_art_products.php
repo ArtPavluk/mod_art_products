@@ -12,10 +12,5 @@ defined('_JEXEC') or die;
 
 use Joomla\CMS\Helper\ModuleHelper;
 
-require_once __DIR__ . '/helper.php';
-
-$moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx'), ENT_COMPAT, 'UTF-8');
-
-$helper = new modArtProductsHelper;
 
 require ModuleHelper::getLayoutPath($module->module, $params->get('layout', 'default'));
