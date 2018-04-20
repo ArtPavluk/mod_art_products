@@ -6,3 +6,4 @@
  * @license    GNU/GPL license: http://www.gnu.org/copyleft/gpl.html
  * @link       https://art-pavluk.com
  */
+

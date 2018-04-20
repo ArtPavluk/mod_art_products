@@ -1,0 +1,38 @@
+/*
+ * @package    Art products module
+ * @version    1.0.0
+ * @author     Artem Pavluk - www.art-pavluk.com
+ * @copyright  Copyright (c) 2010 - 2018 Private master Pavluk. All rights reserved.
+ * @license    GNU/GPL license: http://www.gnu.org/copyleft/gpl.html
+ * @link       https://art-pavluk.com
+ */
+
+.art-products .product-name h3 {
+	display: inline-block;
+}
+
+.art-products .product-image {
+	position: relative;
+}
+
+.art-products .product-label {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 5px 10px;
+	border-radius: 0;
+}
+
+.art-products .product-price-block {
+	margin-top: 5px;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+
+.art-products .product-price {
+	display: inline-block;
+	background: #fff;
+	padding: 10px;
+	border-radius: 5px;
+}

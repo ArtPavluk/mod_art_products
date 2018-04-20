@@ -27,6 +27,17 @@
 	<config>
 		<fields name="params">
 			<fieldset name="basic">
+				<field name="ajax" type="radio"
+					   label="MOD_ART_PRODUCTS_AJAX"
+					   default="1"
+					   class="btn-group btn-group-yesno">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="limit" type="number"
+					   label="MOD_ART_PRODUCTS_AJAX_LIMIT"
+					   default="5"
+					   showon="ajax:1"/>
 				<field name="products" type="subform"
 					   multiple="true"
 					   label="MOD_ART_PRODUCTS_PRODUCT_ADD">
@@ -34,7 +45,8 @@
 						<field name="name" type="text"
 							   label="MOD_ART_PRODUCTS_PRODUCT_NAME"
 							   class="input-xxlarge input-large-text"
-							   hint="MOD_ART_PRODUCTS_PRODUCT_NAME_HINT"/>
+							   hint="MOD_ART_PRODUCTS_PRODUCT_NAME_HINT"
+							   required="true"/>
 						<field name="code" type="text"
 							   label="MOD_ART_PRODUCTS_PRODUCT_CODE"
 							   hint="MOD_ART_PRODUCTS_PRODUCT_CODE_HINT"/>

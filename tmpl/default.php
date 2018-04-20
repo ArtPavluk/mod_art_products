@@ -10,19 +10,35 @@
 
 defined('_JEXEC') or die;
 
+use Joomla\CMS\Helper\ModuleHelper;
 use Joomla\CMS\HTML\HTMLHelper;
 use Joomla\CMS\Language\Text;
 
 
-HTMLHelper::_('jquery.framework');
-HTMLHelper::_('script', 'media/mod_art_products/js/products.js', array('version' => 'auto'));
-HTMLHelper::_('stylesheet', 'media/mod_art_products/css/products.css', array('version' => 'auto'));
+HTMLHelper::_('stylesheet', 'media/mod_art_products/css/default.min.css', array('version' => 'auto'));
+
+if ($ajax)
+{
+	HTMLHelper::_('jquery.framework');
+	HTMLHelper::_('script', 'media/mod_art_products/js/ajax.js', array('version' => 'auto'));
+}
+if ($order)
+{
+	HTMLHelper::_('jquery.framework');
+	HTMLHelper::_('script', 'media/mod_art_products/js/order.js', array('version' => 'auto'));
+}
 ?>
-<div data-mod-art-products="<?php echo $module->id; ?>">
-	<div class="loading">
-		<?php echo Text::_('MOD_ART_PRODUCTS_LOADING'); ?>
+
+<div class="art-products" <?php echo ($ajax) ? 'data-mod-art-products="' . $module->id . '"' : ''; ?>>
+	<div class="items">
+		<?php if (!$ajax)
+		{
+			require ModuleHelper::getLayoutPath($module->module, $layout . '_items');
+		} ?>
 	</div>
-	<div class="result">
-		<div class="items"></div>
-	</div>
+	<?php if ($ajax && $limit): ?>
+		<div class="row-fluid">
+			<a class="btn span12 ajax-more"><?php echo Text::_('MOD_ART_PRODUCTS_AJAX_MORE'); ?></a>
+		</div>
+	<?php endif; ?>
 </div>

@@ -8,9 +8,18 @@
  * @link       https://art-pavluk.com
  */
 
+
 defined('_JEXEC') or die;
 
 use Joomla\CMS\Helper\ModuleHelper;
 
+require_once __DIR__ . '/helper.php';
 
-require ModuleHelper::getLayoutPath($module->module, $params->get('layout', 'default'));
+$helper = new modArtProductsHelper();
+$ajax   = ($params->get('ajax', 0));
+$order   = ($params->get('order', 0));
+$limit  = $params->get('limit', 0);
+$layout = $params->get('layout', 'default');
+$items  = ($ajax) ? array() : $helper::getItems($params);
+
+require ModuleHelper::getLayoutPath($module->module, $layout);
