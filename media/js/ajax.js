@@ -21,7 +21,7 @@
 				$.ajax({
 					type: 'POST',
 					dataType: 'json',
-					url: '/index.php?option=com_ajax&module=art_products&format=json',
+					url: '/index.php?option=com_ajax&module=art_products&task=items&format=json',
 					data: {module_id: module_id, offset: itemsBlock.find('.item').length},
 					success: function (response) {
 						if (response.data) {

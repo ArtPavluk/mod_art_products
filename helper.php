@@ -26,17 +26,21 @@ class modArtProductsHelper
 	 */
 	public static function getAjax()
 	{
-		if ($params = self::getModuleParams(Factory::getApplication()->input->get('module_id', 0)))
+		$app = Factory::getApplication();
+		$task = $app->input->get('task', false);
+		if ($params = self::getModuleParams($app->input->get('module_id', 0)))
 		{
 			$items = self::getItems($params);
 			if (count($items))
 			{
-				ob_start();
-				require ModuleHelper::getLayoutPath('mod_art_products', $params->get('layout', 'default') . '_items');
-				$response = ob_get_contents();
-				ob_end_clean();
+				if ($task && $task == 'items'){
+					ob_start();
+					require ModuleHelper::getLayoutPath('mod_art_products', $params->get('layout', 'default') . '_items');
+					$response = ob_get_contents();
+					ob_end_clean();
 
-				return $response;
+					return $response;
+				}
 			}
 		}
 
