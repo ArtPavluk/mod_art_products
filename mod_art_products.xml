@@ -17,6 +17,7 @@
 	</languages>
 	<files>
 		<filename module="mod_art_products">mod_art_products.php</filename>
+		<folder>fields</folder>
 		<folder>tmpl</folder>
 		<filename>helper.php</filename>
 	</files>
@@ -74,6 +75,82 @@
 						<field type="spacer" hr="false"/>
 					</form>
 				</field>
+			</fieldset>
+			<fieldset name="order" label="MOD_ART_PRODUCTS_ORDER"  addfieldpath="/modules/mod_art_products/fields/">
+				<field name="order_enable" type="radio"
+					   label="MOD_ART_PRODUCTS_ORDER_ENABLE"
+					   class="btn-group btn-group-yesno"
+					   default="0">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="order_redirect" type="radio"
+					   label="MOD_ART_PRODUCTS_ORDER_REDIRECT"
+					   class="btn-group btn-group-yesno"
+					   default="0"
+					   showon="order_enable:1">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="order_redirect_link" type="text"
+					   label="MOD_ART_PRODUCTS_ORDER_REDIRECT_LINK"
+					   description="MOD_ART_PRODUCTS_ORDER_REDIRECT_LINK_DESCRIPTION"
+					   showon="order_enable:1[AND]order_redirect:1"/>
+				<field type="note" name="order_form_spacer"
+					   label="MOD_ART_PRODUCTS_ORDER_FORM_SPACER"
+					   showon="order_enable:1"/>
+				<field name="order_form_name" type="radio"
+					   label="MOD_ART_PRODUCTS_ORDER_FORM_NAME"
+					   class="btn-group btn-group-yesno"
+					   default="1"
+					   showon="order_enable:1">
+					<option value="1">JSHOW</option>
+					<option value="3">MOD_ART_PRODUCTS_ORDER_FORM_REQUIRED</option>
+					<option value="0">JHIDE</option>
+				</field>
+				<field name="order_form_phone" type="radio"
+					   label="MOD_ART_PRODUCTS_ORDER_FORM_PHONE"
+					   class="btn-group btn-group-yesno"
+					   default="3"
+					   showon="order_enable:1">
+					<option value="1">JSHOW</option>
+					<option value="3">MOD_ART_PRODUCTS_ORDER_FORM_REQUIRED</option>
+					<option value="0">JHIDE</option>
+				</field>
+				<field name="order_form_email" type="radio"
+					   label="MOD_ART_PRODUCTS_ORDER_FORM_EMAIL"
+					   class="btn-group btn-group-yesno"
+					   default="0"
+					   showon="order_enable:1">
+					<option value="1">JSHOW</option>
+					<option value="3">MOD_ART_PRODUCTS_ORDER_FORM_REQUIRED</option>
+					<option value="0">JHIDE</option>
+				</field>
+				<field name="order_form_message" type="radio"
+					   label="MOD_ART_PRODUCTS_ORDER_FORM_MESSAGE"
+					   class="btn-group btn-group-yesno"
+					   default="0"
+					   showon="order_enable:1">
+					<option value="1">JSHOW</option>
+					<option value="3">MOD_ART_PRODUCTS_ORDER_FORM_REQUIRED</option>
+					<option value="0">JHIDE</option>
+				</field>
+				<field type="note" name="order_admin_spacer"
+					   label="MOD_ART_PRODUCTS_ORDER_ADMIN_SPACER"
+					   showon="order_enable:1"/>
+				<field name="order_admin" type="text"
+					   label="MOD_ART_PRODUCTS_ORDER_ADMIN"
+					   showon="order_enable:1"/>
+				<field name="order_subject" type="text"
+					   label="MOD_ART_PRODUCTS_ORDER_SUBJECT"
+					   showon="order_enable:1"/>
+				<field type="noteshort" name="order_admin_shortcode"
+					   label="MOD_ART_PRODUCTS_ORDER_ADMIN_TEXT"
+					   showon="order_enable:1"/>
+				<field name="order_admin_text" type="editor"
+					   label=" "
+					   filter="safehtml"
+					   showon="order_enable:1"/>
 			</fieldset>
 			<fieldset name="advanced">
 				<field name="layout" type="modulelayout"

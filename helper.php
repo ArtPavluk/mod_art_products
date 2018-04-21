@@ -18,6 +18,24 @@ use Joomla\CMS\Helper\ModuleHelper;
 class modArtProductsHelper
 {
 	/**
+	 * Form fields list
+	 *
+	 * @var    array
+	 *
+	 * @since  1.0.0
+	 */
+	public static $_fromFields = array('name', 'phone', 'email','message');
+
+	/**
+	 * Product fields list
+	 *
+	 * @var    array
+	 *
+	 * @since  1.0.0
+	 */
+	public static $_productFields = array('name', 'code', 'price','price_old', 'tag', 'image', 'text');
+
+	/**
 	 * Get items layout
 	 *
 	 * @return bool|string
@@ -26,14 +44,15 @@ class modArtProductsHelper
 	 */
 	public static function getAjax()
 	{
-		$app = Factory::getApplication();
+		$app  = Factory::getApplication();
 		$task = $app->input->get('task', false);
 		if ($params = self::getModuleParams($app->input->get('module_id', 0)))
 		{
 			$items = self::getItems($params);
 			if (count($items))
 			{
-				if ($task && $task == 'items'){
+				if ($task && $task == 'items')
+				{
 					ob_start();
 					require ModuleHelper::getLayoutPath('mod_art_products', $params->get('layout', 'default') . '_items');
 					$response = ob_get_contents();
