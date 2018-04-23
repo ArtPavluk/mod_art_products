@@ -7,15 +7,15 @@
  * @link       https://art-pavluk.com
  */
 
-.art-products .product-name h3 {
+.art-products .art-product-name h3 {
 	display: inline-block;
 }
 
-.art-products .product-image {
+.art-products .art-product-image {
 	position: relative;
 }
 
-.art-products .product-label {
+.art-products .art-product-label {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -23,16 +23,19 @@
 	border-radius: 0;
 }
 
-.art-products .product-price-block {
+.art-products .art-product-price-block {
 	margin-top: 5px;
 	font-weight: bold;
 	font-size: 16px;
 }
 
-
-.art-products .product-price {
+.art-products .art-product-price {
 	display: inline-block;
 	background: #fff;
 	padding: 10px;
 	border-radius: 5px;
+}
+
+.art-product-order{
+	margin-top: 15px;
 }

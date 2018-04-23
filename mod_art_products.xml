@@ -94,6 +94,7 @@
 				</field>
 				<field name="order_redirect_link" type="text"
 					   label="MOD_ART_PRODUCTS_ORDER_REDIRECT_LINK"
+					   hint="https://site.com/page.html"
 					   description="MOD_ART_PRODUCTS_ORDER_REDIRECT_LINK_DESCRIPTION"
 					   showon="order_enable:1[AND]order_redirect:1"/>
 				<field type="note" name="order_form_spacer"

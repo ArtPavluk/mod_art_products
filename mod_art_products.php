@@ -20,6 +20,7 @@ $ajax   = ($params->get('ajax', 0));
 $order   = ($params->get('order_enable', 0));
 $limit  = $params->get('limit', 0);
 $layout = $params->get('layout', 'default');
+$module_id = $module->id;
 $items  = ($ajax) ? array() : $helper::getItems($params);
 
 require ModuleHelper::getLayoutPath($module->module, $layout);

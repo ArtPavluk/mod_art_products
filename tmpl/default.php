@@ -29,16 +29,22 @@ if ($order)
 }
 ?>
 
-<div class="art-products" <?php echo ($ajax) ? 'data-mod-art-products="' . $module->id . '"' : ''; ?>>
+<div class="art-products" <?php echo ($ajax || $order) ? 'data-mod-art-products="' . $module->id . '"' : ''; ?>>
 	<div class="items">
 		<?php if (!$ajax)
 		{
 			require ModuleHelper::getLayoutPath($module->module, $layout . '_items');
 		} ?>
 	</div>
+
 	<?php if ($ajax && $limit): ?>
 		<div class="row-fluid">
 			<a class="btn span12 ajax-more"><?php echo Text::_('MOD_ART_PRODUCTS_AJAX_MORE'); ?></a>
 		</div>
 	<?php endif; ?>
+
+	<?php if ($order)
+	{
+		require ModuleHelper::getLayoutPath($module->module, $layout . '_order');
+	} ?>
 </div>
