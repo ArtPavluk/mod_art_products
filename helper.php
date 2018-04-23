@@ -35,7 +35,7 @@ class modArtProductsHelper
 	 *
 	 * @since  1.0.0
 	 */
-	public static $_productFields = array('name', 'code', 'price', 'price_old', 'tag', 'image', 'text');
+	public static $_productFields = array('name', 'code', 'price', 'price_old', 'label', 'image', 'text');
 
 	/**
 	 * Get items layout
@@ -222,6 +222,10 @@ class modArtProductsHelper
 				if (!empty($value) && $field == 'image')
 				{
 					$value = '<img src="' . Uri::base() . $value . '">';
+				}
+				if (!empty($value) && $field == 'label')
+				{
+					$value = Text::_('MOD_ART_PRODUCTS_PRODUCT_LABEL_' . mb_strtolower($value));
 				}
 				$message = str_replace('{product_' . $field . ':value}', $value, $message);
 			}

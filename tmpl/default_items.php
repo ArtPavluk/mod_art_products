@@ -20,9 +20,9 @@ use Joomla\CMS\Language\Text;
 			<div class="row-fluid">
 				<?php if ($item->image): ?>
 					<div class="span3 art-product-image">
-						<?php if ($item->tag): ?>
-							<div class="label label-default art-product-label art-product-label-<?php echo $item->tag;?>">
-								<?php echo Text::_('MOD_ART_PRODUCTS_PRODUCT_TAG_' . mb_strtolower($item->tag)); ?>
+						<?php if ($item->label): ?>
+							<div class="label label-default art-product-label art-product-label-<?php echo $item->label;?>">
+								<?php echo Text::_('MOD_ART_PRODUCTS_PRODUCT_LABEL_' . mb_strtolower($item->label)); ?>
 							</div>
 						<?php endif; ?>
 						<img src="/<?php echo $item->image; ?>" alt="<?php echo $item->name; ?>">

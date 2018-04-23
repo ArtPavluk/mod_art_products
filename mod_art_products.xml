@@ -57,12 +57,12 @@
 						<field name="price_old" type="text"
 							   label="MOD_ART_PRODUCTS_PRODUCT_PRICE_OLD"
 							   hint="MOD_ART_PRODUCTS_PRODUCT_PRICE_OLD_HINT"/>
-						<field name="tag" type="list"
-							   label="MOD_ART_PRODUCTS_PRODUCT_TAG">
-							<option value="">MOD_ART_PRODUCTS_PRODUCT_TAG_SELECT</option>
-							<option value="new">MOD_ART_PRODUCTS_PRODUCT_TAG_NEW</option>
-							<option value="sale">MOD_ART_PRODUCTS_PRODUCT_TAG_SALE</option>
-							<option value="hit">MOD_ART_PRODUCTS_PRODUCT_TAG_HIT</option>
+						<field name="label" type="list"
+							   label="MOD_ART_PRODUCTS_PRODUCT_LABEL">
+							<option value="">MOD_ART_PRODUCTS_PRODUCT_LABEL_SELECT</option>
+							<option value="new">MOD_ART_PRODUCTS_PRODUCT_LABEL_NEW</option>
+							<option value="sale">MOD_ART_PRODUCTS_PRODUCT_LABEL_SALE</option>
+							<option value="hit">MOD_ART_PRODUCTS_PRODUCT_LABEL_HIT</option>
 						</field>
 						<field name="image" type="media" label="MOD_ART_PRODUCTS_PRODUCT_IMAGE" class="input-large"/>
 						<field name="text" type="textarea"
