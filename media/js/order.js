@@ -9,7 +9,7 @@
 
 (function ($) {
 	$(document).ready(function () {
-		$('[data-mod-art-products-order]').on('click', function () {
+		$('body').on('click', '[data-mod-art-products-order]', function () {
 			const block = $(this).closest('[data-mod-art-products]'),
 				module_id = block.data('mod-art-products'),
 				product_id = $(this).data('mod-art-products-order'),
