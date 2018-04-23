@@ -13,7 +13,7 @@ defined('_JEXEC') or die;
 use Joomla\CMS\Language\Text;
 
 ?>
-<div id="art-products-order<?php echo $module_id; ?>" class="modal hide fade" tabindex="-1" role="dialog"
+<div id="art-products-order<?php echo $module_id; ?>" class="modal jviewport-width20 hide fade" tabindex="-1" role="dialog"
 	 aria-hidden="true">
 	<div class="modal-header">
 		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
@@ -21,8 +21,8 @@ use Joomla\CMS\Language\Text;
 			<?php echo Text::_('MOD_ART_PRODUCTS_ORDER_FORM_ORDER'); ?>
 		</h3>
 	</div>
-	<div class="modal-body">
-		<form class="form-horizontal">
+	<div class="modal-body jviewport-height">
+		<form class="text-center">
 			<div class="art-products-result" style="display: none">
 				<div class="message error alert alert-error" style="display: none;"></div>
 				<div class="message success alert alert-success" style="display: none;"></div>
