@@ -44,17 +44,17 @@
 * **Тема письма** - если не указать, будет братся тема по умолчания "Новый заказ"
 * **Текст письма** - Письмо писать пишется в редакторе который выбран у Вас по умолчанию, в письме доступны шорткоды.
 	
-	|    |      Вставить имя поля      |  Вставить значение поля |
-	|----------|:-------------:|------:|
-	| Имя | `{form_name:label}` | `{form_name:value}` | 
-	| Телефон | `{form_phone:label}` | `{form_phone:value}` | 
-	| E-mail | `{form_email:label}` | `{form_email:value}` | 
-	| Пожелание к заказу | `{form_message:label}` | `{form_message:value}` | 
-	| Название: | `{product_name:label}` | `{product_name:value}` | 
-	| Артикул: | `{product_code:label}` | `{product_code:value}` | 
-	| Цена: | `{product_price:label}` | `{product_price:value}` | 
-	| Старая цена: | `{product_price_old:label}` | `{product_price_old:value}` | 
-	| Метка: | `{product_label:label}` | `{product_label:value}` | 
-	| Изображение: | `{product_image:label}` | `{product_image:value}` |
-	| Описание: | `{product_text:label}` | `{product_text:value}` |
+# | Вставить имя поля | Вставить значение поля
+--- | --- | ---|
+Имя | `{form_name:label}` | `{form_name:value}` 
+Телефон | `{form_phone:label}` | `{form_phone:value}` 
+E-mail | `{form_email:label}` | `{form_email:value}` 
+Пожелание к заказу | `{form_message:label}` | `{form_message:value}` 
+Название: | `{product_name:label}` | `{product_name:value}` 
+Артикул: | `{product_code:label}` | `{product_code:value}` 
+Цена: | `{product_price:label}` | `{product_price:value}` 
+Старая цена: | `{product_price_old:label}` | `{product_price_old:value}` 
+Метка: | `{product_label:label}` | `{product_label:value}` 
+Изображение: | `{product_image:label}` | `{product_image:value}`
+Описание: | `{product_text:label}` | `{product_text:value}`
 
