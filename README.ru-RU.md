@@ -67,3 +67,7 @@ E-mail | `{form_email:label}` | `{form_email:value}`
 ![Добавить товар](https://demo.art-pavluk.com/images/screenshots/mod_art_products/ru/add.png)
 ### Настройка заказа
 ![Настройка заказа](https://demo.art-pavluk.com/images/screenshots/mod_art_products/ru/order.png)
+### Внешний вид модуля
+![Внешний вид модуля](https://demo.art-pavluk.com/images/screenshots/mod_art_products/ru/front.png)
+### Внешний вид формы заказа
+![Внешний вид модуля](https://demo.art-pavluk.com/images/screenshots/mod_art_products/ru/front-order.png)
