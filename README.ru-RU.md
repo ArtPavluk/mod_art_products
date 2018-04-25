@@ -58,3 +58,10 @@ E-mail | `{form_email:label}` | `{form_email:value}`
 Изображение: | `{product_image:label}` | `{product_image:value}`
 Описание: | `{product_text:label}` | `{product_text:value}`
 
+
+## Скриншоты
+
+### Основные настройки модуля
+![Основные настройки модуля](https://demo.art-pavluk.com/images/screenshots/mod_art_products/ru/base.png)
+### Добавить товар
+![Добавить товар](https://demo.art-pavluk.com/images/screenshots/mod_art_products/ru/add.png)
