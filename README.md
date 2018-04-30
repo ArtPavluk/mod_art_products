@@ -1,4 +1,4 @@
-# Art products - simple list of products
+# Art products
 The module displays a simple list of products with an image and the ability to order.
 
 **[Download last version](https://github.com/ArtPavluk/mod_art_products/releases/latest)**   

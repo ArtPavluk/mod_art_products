@@ -1,4 +1,4 @@
-# Art products - простой список товаров
+# Art products
 Модуль выводить простой список товаров  с изображением и возможностью заказать.
 
 **[Скачать последнюю версию](https://github.com/ArtPavluk/mod_art_products/releases/latest)**   
