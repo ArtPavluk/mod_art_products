@@ -21,6 +21,7 @@
 	left: 0;
 	padding: 5px 10px;
 	border-radius: 0;
+	z-index: 5;
 }
 
 .art-products .art-product-price-block {

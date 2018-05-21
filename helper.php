@@ -152,6 +152,14 @@ class modArtProductsHelper
 			{
 				if ($limit == 0 || (($i >= $offset && $i < ($offset + $limit))))
 				{
+					$imagesArray = !empty($item->images) ? $item->images : array();
+					$images =  array();
+					foreach ($imagesArray as $image){
+						if ($image){
+							$images[] = $image;
+						}
+					}
+					$item->images = $images;
 					$items[$key] = $item;
 				}
 				$i++;

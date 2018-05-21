@@ -66,7 +66,10 @@
 							<option value="sale">MOD_ART_PRODUCTS_PRODUCT_LABEL_SALE</option>
 							<option value="hit">MOD_ART_PRODUCTS_PRODUCT_LABEL_HIT</option>
 						</field>
-						<field name="image" type="media" label="MOD_ART_PRODUCTS_PRODUCT_IMAGE" class="input-large"/>
+						<field name="images" type="prodimages"
+							   label="MOD_ART_PRODUCTS_PRODUCT_IMAGE"
+							   count="6"
+							   class="input-large"/>
 						<field name="text" type="textarea"
 							   label="MOD_ART_PRODUCTS_PRODUCT_TEXT"
 							   hint="MOD_ART_PRODUCTS_PRODUCT_TEXT_HINT"
