@@ -11,7 +11,6 @@
 defined('_JEXEC') or die;
 
 use Joomla\CMS\Form\FormField;
-use Joomla\CMS\Language\Text;
 
 class JFormFieldNoteShort extends FormField
 {
@@ -22,45 +21,37 @@ class JFormFieldNoteShort extends FormField
 	 *
 	 * @since  0.5.0
 	 */
-
 	protected $type = 'noteshort';
 
-	function getInput()
+	/**
+	 * Name of the layout being used to render the field
+	 *
+	 * @var    string
+	 *
+	 * @since  1.1.0
+	 */
+	protected $layout = 'modules.mod_art_products.noteshort';
+
+
+	/**
+	 * Method to get the data to be passed to the layout for rendering.
+	 *
+	 * @return  array
+	 *
+	 * @since  1.1.0
+	 */
+	protected function getLayoutData()
 	{
 		JLoader::register('modArtProductsHelper', JPATH_SITE . '/modules/mod_art_products/helper.php');
-		$fromFields    = modArtProductsHelper::$_fromFields;
-		$productFields = modArtProductsHelper::$_productFields;
 
-		$html = '<button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#shortcode">';
-		$html .= Text::_('MOD_ART_PRODUCTS_DESCRIPTION_SHORT_BUTTON');
-		$html .= '</button>';
-		$html .= '<div id="shortcode" class="collapse">';
-		$html .= '<table class="table table-bordered">';
-		$html .= '<thead><tr><th></th><th>' . Text::_('MOD_ART_PRODUCTS_DESCRIPTION_SHORT_LABEL') . '</th>';
-		$html .= '<th>' . Text::_('MOD_ART_PRODUCTS_DESCRIPTION_SHORT_VALUE') . '</th></tr></thead>';
-		$html .= '<tbody>';
+		$data = parent::getLayoutData();
 
-		foreach ($fromFields as $field)
-		{
-			$html .= '<tr>';
-			$html .= '<td>' . Text::_('MOD_ART_PRODUCTS_ORDER_FORM_' . mb_strtoupper($field)) . '</td>';
-			$html .= '<td><code>{form_' . $field . ':label}</code></td>';
-			$html .= '<td><code>{form_' . $field . ':value}</code></td>';
-			$html .= '</tr>';
-		}
+		$data['fromFields']    = modArtProductsHelper::$_fromFields;
+		$data['productFields'] = modArtProductsHelper::$_productFields;
 
-		foreach ($productFields as $field)
-		{
-			$html .= '<tr>';
-			$html .= '<td>' . Text::_('MOD_ART_PRODUCTS_PRODUCT_' . mb_strtoupper($field)) . '</td>';
-			$html .= '<td><code>{product_' . $field . ':label}</code></td>';
-			$html .= '<td><code>{product_' . $field . ':value}</code></td>';
-			$html .= '</tr>';
-		}
-		$html .= '</tbody></table></div>';
-
-		return $html;
+		return $data;
 	}
+
 
 }
 

@@ -20,7 +20,7 @@ use Joomla\CMS\Uri\Uri;
 class modArtProductsHelper
 {
 	/**
-	 * Form fields list
+	 * Form field list
 	 *
 	 * @var    array
 	 *
@@ -29,7 +29,7 @@ class modArtProductsHelper
 	public static $_fromFields = array('name', 'phone', 'email', 'message');
 
 	/**
-	 * Product fields list
+	 * Product field list
 	 *
 	 * @var    array
 	 *
@@ -169,8 +169,8 @@ class modArtProductsHelper
 	 * Send mail admin email
 	 *
 	 * @param array   $product Order product
-	 * @param array   $labels  Form fields label
-	 * @param array   $values  Form fields values
+	 * @param array   $labels  Form field label
+	 * @param array   $values  Form field values
 	 * @param JObject $params  Module params
 	 *
 	 * @return bool
