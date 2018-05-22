@@ -153,15 +153,20 @@ class modArtProductsHelper
 				if ($limit == 0 || (($i >= $offset && $i < ($offset + $limit))))
 				{
 					$imagesArray = !empty($item->images) ? $item->images : array();
-					$images =  array();
-					foreach ($imagesArray as $image){
-						if ($image){
+					$images      = array();
+
+					foreach ($imagesArray as $image)
+					{
+						if ($image)
+						{
 							$images[] = $image;
 						}
 					}
 					$item->images = $images;
+
 					$items[$key] = $item;
 				}
+				
 				$i++;
 			}
 
@@ -240,7 +245,7 @@ class modArtProductsHelper
 		}
 		else
 		{
-			$message = '<a href="'.Uri::base().'administrator/index.php?option=com_modules&amp;task=module.edit&amp;id=' .
+			$message = '<a href="' . Uri::base() . 'administrator/index.php?option=com_modules&amp;task=module.edit&amp;id=' .
 				$app->input->get('module_id', 0) . '">' .
 				Text::_('MOD_ART_PRODUCTS_ORDER_ADMIN_TEXT_DEFAULT') . '</a>';
 		}
