@@ -74,11 +74,16 @@ class modArtProductsHelper
 
 					$product_id = $app->input->get('product_id', '');
 					$form       = $app->input->post->get('form', array(), 'array');
+
 					foreach ($fields as $field)
 					{
-						$label = Text::_('MOD_ART_PRODUCTS_ORDER_FORM_' . mb_strtoupper($field));
-						$param = $params->get('order_form_' . $field, 0, 'int');
-						$value = $form[$field];
+						if (!empty($form[$field]))
+						{
+							$label = Text::_('MOD_ART_PRODUCTS_ORDER_FORM_' . mb_strtoupper($field));
+							$param = $params->get('order_form_' . $field, 0, 'int');
+							$value = $form[$field];
+						}
+
 
 						if ($param)
 						{
@@ -166,7 +171,7 @@ class modArtProductsHelper
 
 					$items[$key] = $item;
 				}
-				
+
 				$i++;
 			}
 
@@ -232,9 +237,11 @@ class modArtProductsHelper
 				$message = str_replace('{product_' . $field . ':label}', $label, $message);
 
 				$value = (!empty($product[$field])) ? $product[$field] : '';
-				if (!empty($value) && $field == 'image')
+
+				if (!empty($product['images']) && $field == 'image')
 				{
-					$value = '<img src="' . Uri::base() . $value . '">';
+
+					$value = '<img src="' . Uri::base() . $product['images'][0] . '">';
 				}
 				if (!empty($value) && $field == 'label')
 				{
