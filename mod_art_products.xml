@@ -2,12 +2,12 @@
 <extension version="3.8" type="module" client="site" method="upgrade">
 	<name>MOD_ART_PRODUCTS</name>
 	<author>Artem Pavluk</author>
-	<creationDate>April 2018</creationDate>
+	<creationDate>May 2018</creationDate>
 	<copyright>© copyright 2010 - 2018 Private master Pavluk</copyright>
 	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
 	<authorEmail>info@art-pavluk.com</authorEmail>
 	<authorUrl>https://art-pavluk.com</authorUrl>
-	<version>1.0.0</version>
+	<version>1.1.0</version>
 	<description>MOD_ART_PRODUCTS_DESCRIPTION</description>
 	<scriptfile>script.php</scriptfile>
 	<languages folder="language">
