@@ -16,13 +16,14 @@
 				itemsBlock = block.find('.items'),
 				more = block.find('.ajax-more');
 
+
 			// Send Ajax
 			function getItems() {
 				$.ajax({
 					type: 'POST',
 					dataType: 'json',
 					url: '/index.php?option=com_ajax&module=art_products&task=items&format=json',
-					data: {module_id: module_id, offset: itemsBlock.find('.item').length},
+					data: {module_id: module_id, offset: itemsBlock.find('[data-art-product]').length},
 					success: function (response) {
 						if (response.data) {
 							$(response.data).appendTo(itemsBlock);
