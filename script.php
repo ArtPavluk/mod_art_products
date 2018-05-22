@@ -10,6 +10,9 @@
 
 defined('_JEXEC') or die;
 
+use Joomla\CMS\Factory;
+use Joomla\Registry\Registry;
+
 jimport('joomla.filesystem.folder');
 jimport('joomla.filesystem.file');
 
@@ -49,6 +52,52 @@ class mod_Art_ProductsInstallerScript
 		JFolder::move($module, $layouts);
 
 		return true;
+	}
+
+	/**
+	 * This method is called after a component is updated.
+	 *
+	 * Migration image from version 1.0.0 to 1.1.0
+	 *
+	 * @param  \stdClass $parent  Parent object calling object.
+	 *
+	 * @return void
+	 *
+	 * @since  1.1.0
+	 */
+	public function update($parent)
+	{
+		$db    = Factory::getDbo();
+		$query = $db->getQuery(true);
+		$query->select(array('id','params'))
+			->from($db->quoteName('#__modules'))
+			->where($db->quoteName('module') . ' = ' . $db->quote('mod_art_products'));
+		$db->setQuery($query);
+		$modules = $db->loadObjectList('id');
+		if (!empty($modules)){
+			foreach ($modules as $key => $module){
+				$params = new Registry($module->params);
+				$products = $params->get('products');
+				if (!empty($products)){
+					foreach ($products as &$product){
+						if (isset($product->image)){
+							$product->images = array(
+								0 => $product->image
+							);
+							unset($product->image);
+						}
+					}
+					$params->set('products',$products);
+				}
+				$params = $params->toString();
+				$module->params = $params;
+
+				$db->updateObject('#__modules', $module, 'id');
+
+				$db->execute();
+			}
+		}
+
 	}
 
 	/**
