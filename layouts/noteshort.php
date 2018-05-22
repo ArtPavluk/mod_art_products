@@ -43,8 +43,8 @@ extract($displayData);
 				<td>
 					<?php echo Text::_('MOD_ART_PRODUCTS_PRODUCT_' . mb_strtoupper($field));?>
 				</td>
-				<td><code>{form_<?php echo $field;?>:label}</code></td>
-				<td><code>{form_<?php echo $field;?>:value}</code></td>
+				<td><code>{product_<?php echo $field;?>:label}</code></td>
+				<td><code>{product_<?php echo $field;?>:value}</code></td>
 			</tr>
 		<?php endforeach;?>
 		</tbody>
