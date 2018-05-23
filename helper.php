@@ -77,15 +77,15 @@ class modArtProductsHelper
 
 					foreach ($fields as $field)
 					{
-						if (!empty($form[$field]))
-						{
 							$label = Text::_('MOD_ART_PRODUCTS_ORDER_FORM_' . mb_strtoupper($field));
 							$param = $params->get('order_form_' . $field, 0, 'int');
-							$value = $form[$field];
-						}
+
+							if (isset($form[$field])){
+								$value = $form[$field];
+							}
 
 
-						if ($param)
+						if ($param && isset($form[$field]))
 						{
 							$labels['form_' . $field] = $label;
 							$values['form_' . $field] = $value;
