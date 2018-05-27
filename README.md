@@ -2,7 +2,8 @@
 The module displays a simple list of products with an image and the ability to order.
 
 **[Download last version](https://github.com/ArtPavluk/mod_art_products/releases/latest)**   
-**[Live Demo](https://demo.art-pavluk.com/en)**
+**[Live Demo](https://demo.art-pavluk.com/en)**   
+**[Joomla! Extensions Directory](https://extensions.joomla.org/extensions/extension/e-commerce/art-products/)**
 
 **Supported Joomla versions:** 3.8.7 and later  
 **Read this in other languages:** 

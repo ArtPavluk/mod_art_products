@@ -2,7 +2,8 @@
 Модуль выводить простой список товаров  с изображением и возможностью заказать.
 
 **[Скачать последнюю версию](https://github.com/ArtPavluk/mod_art_products/releases/latest)**   
-**[Посмотреть демо](https://demo.art-pavluk.com)**
+**[Посмотреть демо](https://demo.art-pavluk.com)**  
+**[Joomla! Extensions Directory](https://extensions.joomla.org/extensions/extension/e-commerce/art-products/)**
 
 **Поддерживаемые версии Joomla:** 3.8.7 и более поздние версии   
 **Прочесть на других языках:**
