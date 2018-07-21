@@ -13,7 +13,7 @@
 			const block = $(this).closest('[data-mod-art-products]'),
 				module_id = block.data('mod-art-products'),
 				product_id = $(this).data('mod-art-products-order'),
-				modal = block.find('#art-products-order' + module_id),
+				modal = $('body').find('#art-products-order' + module_id),
 				form = modal.find('form'),
 				formData = {},
 				result = form.find('.art-products-result');
