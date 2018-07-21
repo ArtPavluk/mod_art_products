@@ -15,7 +15,7 @@ use Joomla\CMS\Language\Text;
 ?>
 
 <?php foreach ($items as $key => $item):
-	$classGrid = (!empty($item->images)) ? 'span9' : 'span3' ?>
+	$classGrid = (!empty($item->images)) ? 'span9' : 'span12' ?>
 	<div class="itemProduct" data-art-product>
 		<div class="well">
 			<div class="row-fluid">

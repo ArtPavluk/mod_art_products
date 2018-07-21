@@ -15,7 +15,7 @@ use Joomla\CMS\Language\Text;
 ?>
 
 <?php foreach ($items as $key => $item):
-	$classGrid = (!empty($item->images)) ? 'col-sm-9' : 'col-sm-3' ?>
+	$classGrid = (!empty($item->images)) ? 'col-sm-9' : 'col-sm-12' ?>
 	<div class="itemProduct" data-art-product>
 		<div class="card bg-light card-body mb-2">
 			<div class="row">
