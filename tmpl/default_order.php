@@ -10,8 +10,11 @@
 
 defined('_JEXEC') or die;
 
+use Joomla\CMS\HTML\HTMLHelper;
 use Joomla\CMS\Language\Text;
 
+HTMLHelper::_('jquery.framework');
+HTMLHelper::_('script', 'media/mod_art_products/js/order.min.js', array('version' => 'auto'));
 ?>
 <div id="art-products-order<?php echo $module_id; ?>" class="modal jviewport-width20 hide fade" tabindex="-1" role="dialog"
 	 aria-hidden="true">

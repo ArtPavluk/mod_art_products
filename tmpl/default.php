@@ -22,11 +22,7 @@ if ($ajax)
 	HTMLHelper::_('jquery.framework');
 	HTMLHelper::_('script', 'media/mod_art_products/js/ajax.min.js', array('version' => 'auto'));
 }
-if ($order)
-{
-	HTMLHelper::_('jquery.framework');
-	HTMLHelper::_('script', 'media/mod_art_products/js/order.min.js', array('version' => 'auto'));
-}
+
 ?>
 
 <div class="art-products" <?php echo ($ajax || $order) ? 'data-mod-art-products="' . $module->id . '"' : ''; ?>>
